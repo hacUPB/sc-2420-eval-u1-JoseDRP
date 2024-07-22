@@ -36,6 +36,6 @@ Existen diferentes variantes de arquitecturas, como por ejemplo:
 - Arquitectura SPARC: Utilizada principalmente en servidores UNIX.
 - Arquitectura RISC-V: Cada vez más popular para investigación y desarrollo de chips personalizados. Es de código abierto.
 
-**3.** [Link Mapa conceptual](png.png)
+**3.** [Link Mapa conceptual](https://www.goconqr.com/es-ES/mindmap/39709115/arquitectura-de-un-computador)
 
 
