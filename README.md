@@ -30,12 +30,12 @@
 
 Existen diferentes variantes de arquitecturas, como por ejemplo:
 
-- Arquitectura x86/x64 (IA-32/IA-64): Predominante en la mayoría de los PCs y servidores.
-- Arquitectura ARM: Utilizada en dispositivos móviles, tablets y en algunos PCs
-- Arquitectura Power (IBM Power): Utilizada en algunos servidores y supercomputadoras.
-- Arquitectura SPARC: Utilizada principalmente en servidores UNIX.
-- Arquitectura RISC-V: Cada vez más popular para investigación y desarrollo de chips personalizados. Es de código abierto.
+- Arquitectura Von Neumann
+- Arquitectura Harvard
+- Arquitectura RISC
+- Arquitectura CISC
 
-**3.** [Link Mapa conceptual](https://www.goconqr.com/es-ES/mindmap/39709115/arquitectura-de-un-computador)
+**3-4.** [Link Mapa conceptual](https://www.goconqr.com/es-ES/mindmap/39709115/arquitectura-de-un-computador)
 
 
+**5.** 
