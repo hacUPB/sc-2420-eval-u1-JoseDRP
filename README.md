@@ -38,4 +38,32 @@ Existen diferentes variantes de arquitecturas, como por ejemplo:
 **3-4.** [Link Mapa conceptual](https://www.goconqr.com/es-ES/mindmap/39709115/arquitectura-de-un-computador)
 
 
-**5.** 
+### Solución actividad 2 - Unidad 1
+
+#### Ejercicio 1. 
+
+- Lo primero que hice para darle solución al problema es resolverlo en un lenguaje de alto nivel como c#. Esto debido a que aún tengo ciertas dudas con el lenguaje ensamblador por lo que prefiero hacerlo de esta manera para tener claro el problema y buscar alternativas. El código en c# me funcionó bien, es el siguiente: 
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Valor de N: ");
+        int N = int.Parse(Console.ReadLine());
+
+        int suma = 0;
+        for (int i = 1; i <= N; i++)
+        {
+            suma += i;
+        }
+
+        // Resultado
+        Console.WriteLine($"La suma de los primeros {N} números naturales es: {suma}");
+    }
+}
+
+- Este código me funcionó bastante bien en la prueba que realicé, corrió justo como debería. El profesor me dió unos consejos para comenzar con el código en ensamblador. Así que intenté comenzar con el código en ensamblador.
+
+- Tuve ciertos retrasos por gitbash ya que no me estaba funcionando como debería
