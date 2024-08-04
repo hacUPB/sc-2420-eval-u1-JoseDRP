@@ -1,9 +1,9 @@
 ## SOLUCIÓN FINAL EJERCICIO #1
 
-
-\\
+```assembler
 @0
 D=A
+
 
 @1
 M=D
@@ -57,4 +57,5 @@ M=D
 
 @0
 0;JMP
+```
 \\
