@@ -44,6 +44,7 @@ Existen diferentes variantes de arquitecturas, como por ejemplo:
 
 - Lo primero que hice para darle solución al problema es resolverlo en un lenguaje de alto nivel como c#. Esto debido a que aún tengo ciertas dudas con el lenguaje ensamblador por lo que prefiero hacerlo de esta manera para tener claro el problema y buscar alternativas. El código en c# me funcionó bien, es el siguiente: 
 
+```assembler
 using System;
 
 class Program
@@ -63,6 +64,7 @@ class Program
         Console.WriteLine($"La suma de los primeros {N} números naturales es: {suma}");
     }
 }
+```
 
 - Este código me funcionó bastante bien en la prueba que realicé, corrió justo como debería. El profesor me dió unos consejos para comenzar con el código en ensamblador. Así que intenté comenzar con el código en ensamblador.
 
@@ -70,7 +72,7 @@ class Program
 
 - Luego de esto, usé chat gpt para ver de qué manera hacía el código y poder entenderlo y tomar una referencia:
 
-\\
+```
 // Inicialización
 @0
 
@@ -106,14 +108,13 @@ M=1
     0;JMP
     
 (END)
-\\
+```
 
 - puse este código en la consola del ensamblador pero me saltaban ciertos errores que no supe solucionar.
 
 - finalmente y luego de diversos intentos con ayuda de chat gpt y modificandolo con conocimientos vistos en clase, pude hacer un código que me funcionaba medianamente bien:
 
-
-\\
+```
 @0
 D=A
 @1
@@ -168,4 +169,4 @@ M=D
 
 @0
 0;JMP
-\\
+```
