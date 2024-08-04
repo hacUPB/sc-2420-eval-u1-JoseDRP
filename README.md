@@ -219,3 +219,36 @@ class Program
     }
 }
 ```
+- luego de esto, y con los conocimientos que logré asentar luego del ejercicio 1, pude hacer este código en assembler:
+
+```assembler
+@2
+D=M
+@3
+M=1
+
+(LOOP)
+    @2
+    D=M
+    @END
+    D;JEQ
+
+    @3
+    D=M
+    @2
+    M=D*M
+    @2
+    D=M
+    D=D-1
+    @2
+    M=D
+
+    @LOOP
+    0;JMP
+
+(END)
+    @END
+    0;JMP
+```
+
+- sin embargo, por alguna razón que desconozco, el archivo no era reconocido por la consola entonces no pude hacer el testeo para que funcionara a pesar de hacer varios intentos modificando el código para comprobar si esa era la fuente del problema.
