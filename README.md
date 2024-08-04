@@ -67,3 +67,105 @@ class Program
 - Este código me funcionó bastante bien en la prueba que realicé, corrió justo como debería. El profesor me dió unos consejos para comenzar con el código en ensamblador. Así que intenté comenzar con el código en ensamblador.
 
 - Tuve ciertos retrasos por gitbash ya que no me estaba funcionando como debería
+
+- Luego de esto, usé chat gpt para ver de qué manera hacía el código y poder entenderlo y tomar una referencia:
+
+\\
+// Inicialización
+@0
+
+D=M  
+@i
+M=D
+
+@1
+M=0
+
+// Inicializar el índice i
+@2
+M=1
+
+// Comenzar el bucle
+(LOOP)
+    @i
+    D=M
+    @2
+    D=D-M
+    @END
+    D;JEQ
+    
+    @2
+    D=M
+    @1
+    M=M+D
+    
+    @2
+    M=M+1
+    
+    @LOOP
+    0;JMP
+    
+(END)
+\\
+
+- puse este código en la consola del ensamblador pero me saltaban ciertos errores que no supe solucionar.
+
+- finalmente y luego de diversos intentos con ayuda de chat gpt y modificandolo con conocimientos vistos en clase, pude hacer un código que me funcionaba medianamente bien:
+
+
+\\
+@0
+D=A
+@1
+M=D
+
+@15
+D=A
+@16
+M=D
+
+@0
+D=M
+
+@1
+D=A
+@2
+M=D
+
+(LOOP)
+@0
+D=M
+@2
+D=D-M
+@END_LOOP
+D;JLE
+END_LOOP
+
+@1
+D=M
+@2
+D=D+A
+@1
+M=D
+
+@2
+D=M
+@3
+D=D+1
+@2
+M=D
+
+@LOOP
+0;JMP
+
+(END_LOOP)
+
+
+@1
+D=M
+@15
+M=D
+
+@0
+0;JMP
+\\
