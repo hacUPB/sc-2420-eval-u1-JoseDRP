@@ -170,3 +170,52 @@ M=D
 @0
 0;JMP
 ```
+
+#### Ejercicio 2.
+
+- Tal y cómo hice en el ejercicio 1, comencé realizando el código en c# para tener el problema más claro y facilitar el posterior código en assembler; este apartado es fácil porque tengo buenos conocimientos en el lenguaje c#.
+
+Este es el código que diseñé rápidamente:
+
+```assembler
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Leer el número del usuario
+        Console.Write("Ingrese un número entero positivo: ");
+        int number = int.Parse(Console.ReadLine());
+
+        // Validar si el número es positivo
+        if (number < 0)
+        {
+            Console.WriteLine("El número debe ser entero positivo.");
+            return;
+        }
+
+        // Calcular el factorial
+        long factorial = CalculateFactorial(number);
+
+        // Mostrar el resultado
+        Console.WriteLine($"El factorial de {number} es {factorial}");
+    }
+
+    static long CalculateFactorial(int n)
+    {
+        // Caso base: factorial de 0 es 1
+        if (n == 0)
+            return 1;
+
+        // Calcular el factorial usando un bucle
+        long result = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            result *= i;
+        }
+
+        return result;
+    }
+}
+```
