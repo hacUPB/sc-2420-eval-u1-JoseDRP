@@ -249,7 +249,7 @@ M=1
 (END)
     @END
     0;JMP
-c
+```
 
 - sin embargo, por alguna razón que desconozco, el archivo no era reconocido por la consola entonces no pude hacer el testeo para que funcionara a pesar de hacer varios intentos modificando el código para comprobar si esa era la fuente del problema.
 
