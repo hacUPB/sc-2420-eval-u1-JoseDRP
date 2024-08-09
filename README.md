@@ -309,3 +309,5 @@ M=D
 @END
 0;JMP
 ```
+
+- Esta primera versión de código no me funcionó ya que; a pesar de que en la posición 17 de la memoria RAM hacía el loop correspodiente hasta 50 como se indicó en la posición 0 de la memoria, seguía sin pintar los píxeles indicados.
