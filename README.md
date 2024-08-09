@@ -249,6 +249,63 @@ M=1
 (END)
     @END
     0;JMP
-```
+c
 
 - sin embargo, por alguna razón que desconozco, el archivo no era reconocido por la consola entonces no pude hacer el testeo para que funcionara a pesar de hacer varios intentos modificando el código para comprobar si esa era la fuente del problema.
+
+  
+### Solución actividad 3: Pantalla y teclado.
+
+#### Ejercicio 1:
+
+- Lo primero fue plantearme el primer objetivo, el cuál fue pintar la mitad de la pantalla de negro y dejar el resto de blanco al presionar un botón específico.
+
+- Para comenzar con esto, lo primero que hice fue replicar uno de los ejercicios planteados en el curso de nand2tetris, este tenía una buena parte del código para pintar un pequeño rectángulo en la parte superior derecha pero estaba incompleto, luego de algunos intentos para completarlo, el código me quedó de esta manera:
+
+
+```assembler
+@R0
+D=M
+@n
+M=D
+@i
+M=0
+
+@SCREEN
+D=A
+@adress
+M=D
+
+(LOOP)
+@i
+D=M
+@n
+D=D-M
+@END
+D;JGE
+
+@adress
+D=M
+@i
+D=D+M
+@SCREEN
+D=D-A
+A=D
+@R0
+D=M
+M=D
+
+@i
+D=M
+@1
+D=D+A
+@i
+M=D
+
+@LOOP
+0;JMP
+
+(END)
+@END
+0;JMP
+```
