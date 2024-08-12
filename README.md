@@ -313,3 +313,54 @@ M=D
 - Esta primera versión de código no me funcionó ya que; a pesar de que en la posición 17 de la memoria RAM hacía el loop correspodiente hasta 50 como se indicó en la posición 0 de la memoria, seguía sin pintar los píxeles indicados.
 
 - Para solucionar este último código agregué un M=-1 que me faltaba en @adress, ahora pintaba la primera línea pero al hacer el loop, se pintaba en la misma haciendo que no se genere la figura. Por lo que tuve que solucionar esto.
+
+```assembler
+
+@R0
+D=M
+@n
+M=D
+@i
+M=0
+
+@SCREEN
+D=A
+@adress
+M=D
+
+(LOOP)
+@i
+D=M
+@n
+D=D-M
+@END
+D;JGE
+
+@adress
+A=M
+M=-1
+@i
+D=D+M
+@SCREEN
+D=D-A
+A=D
+@R0
+D=M
+M=D
+
+@i
+D=M
+@1
+D=D+A
+@i
+M=D
+
+@LOOP
+0;JMP
+
+(END)
+@END
+0;JMP
+```
+
+- Con este código logré que pintara la primera línea sin problemas, ahora me disponía a agregar punteros R0, R1 y R2 de algún modo para que estos apuntaran hacia las filas y columnas. 
